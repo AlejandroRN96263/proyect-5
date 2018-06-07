@@ -1,0 +1,119 @@
+//////////////////////////////*Proyecto 5 --> Alex Yuyez*/////////////////////////////
+////////////////////////////////////*KEYBOARD*////////////////////////////////////////
+//import libraries-------------------------------------------------------------------- 
+  import processing.sound.*;
+
+
+//Variable Universales¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+PImage piano;
+PFont f;
+
+//Sounds!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ SoundFile c;
+ SoundFile c1;
+ SoundFile d; 
+ SoundFile d2;
+ SoundFile e;
+ SoundFile ff;
+ SoundFile f2;
+ SoundFile g;
+ SoundFile g2;
+ SoundFile a;
+ SoundFile a2;
+ SoundFile b;
+ SoundFile c3;
+
+//void setup°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+void setup()
+{
+  size(880,600);
+ 
+  piano=loadImage("piano.jpg");
+  c = new SoundFile(this, "cachin.mp3");
+  c1 = new SoundFile(this, "bs.mp3");
+  d = new SoundFile(this, "cb.mp3");
+  d2 = new SoundFile(this, "sr.mp3");
+  e = new SoundFile(this, "hl.mp3");
+  ff = new SoundFile(this, "ns.mp3");
+  f2 = new SoundFile(this, "mgm1.mp3");
+  g = new SoundFile(this, "eo.mp3");
+  g2 = new SoundFile(this, "sol.mp3");
+  a = new SoundFile(this, "messenger.mp3");
+  a2 = new SoundFile(this, "cassette.mp3");
+  b = new SoundFile(this, "win.mp3");
+  c3 = new SoundFile(this, "packman.mp3");
+ }
+
+
+//void draw>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-
+void draw()
+{
+ image(piano,0,0);
+ nombre();
+
+}
+
+
+//Void Adicionales====================================================================
+void nombre()
+{
+  fill(255);
+  text("W", width*0.06, 95);
+  text("E", width*0.13, 95);
+  text("T", width*0.28, 95);
+  text("Y", width*0.35, 95);
+  text("U", width*0.42, 95);
+  fill(0);
+  text("A", width*0.03, 280);
+  text("S", width*0.10, 280);
+  text("D", width*0.17, 280);
+  text("F", width*0.24, 280);
+  text("G", width*0.31, 280);
+  text("H", width*0.38, 280);
+  text("J", width*0.45, 280);
+  text("K", width*0.52, 280);
+}
+
+void keyPressed()
+{
+//Naturales )()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()(
+  if(key=='a' || key=='A')
+  { c.play();}
+  
+  if(key=='s' || key=='S')
+  { d.play();}
+  
+  if(key=='d' || key=='D')
+  { e.play();}
+  
+  if(key=='f' || key=='F')
+  { ff.play();}
+  
+  if(key=='g' || key=='G')
+  { g.play();}
+  
+ if(key=='h' || key=='H')
+  { a.play(0);}
+  
+ if(key=='j' || key=='J')
+  { b.play();}
+  
+  if(key=='k' || key=='K')
+  { c3.play();}
+  
+//sostenidos #########################################################################
+  if(key=='w' || key=='W')
+  { c1.play();}
+  
+  if(key=='e' || key=='E')
+  { d2.play();}
+  
+  if(key=='t' || key=='T')
+  { f2.play();}
+
+  if(key=='y' || key=='Y')
+  { g2.play();}
+  
+  if(key=='u' || key=='U')
+  { a2.play();}
+}
